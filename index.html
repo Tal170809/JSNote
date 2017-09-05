@@ -3,44 +3,68 @@
 
 <head lang="en">
     <meta charset="UTF-8">
-    <title>新大郑超</title>
+    <title>新生大学郑超</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="https://o4a7cbihz.qnssl.com/picture/b23784eb-f1e4-44ea-811b-af333e4978bc">
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div id="abc">
+    <div class="page-header">
+        <h1 style="text-align:center;"> 新生大学JavaScript学习天团 <br><small><span style="color:green">学代码不如写代码</span></small></h1>
+    </div>
+    <div>
         <div class="container">
-            <div class="col-md-8">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h2>新大JS学习站</h2>
-                    </div>
-                    <div class="panel-body">
-                        <h4>学习JS，我们是认真的</h4>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">我们的心里话</div>
-                    <div class="panel-body">
-                        <div class="words-pannel" v-for="item in JsonContent">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <a href="#">
-                                        <img class="media-object avatar" v-bind:src="item.avatar" alt="..." style="width: 36px; height:36px">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">
-                                        {{ item.name }}
-                                    </h4>
-                                    {{ item.words }}
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#首页" aria-controls="首页" role="tab" data-toggle="tab">首页</a></li>
+                <li role="presentation"><a href="#我们的心里话" aria-controls="我们的心里话" role="tab" data-toggle="tab">我们的心里话</a></li>
+                <li role="presentation"><a href="#学习笔记" aria-controls="学习笔记" role="tab" data-toggle="tab">学习笔记</a></li>
+            </ul>
 
+            <!-- Tab panes -->
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="首页" style="background-color:rgb(128,128,128);color:white">
+
+                    <h3>没有什么比玩代码更有乐趣了吧</h3>
+                    <p>刻意练习这本书里，介绍了高效率学习的几个重要的概念：舒适区和学习区，针对性练习，即时反馈。
+                        <br> 学习本是一件特别辛苦的事情，而从零开始学习一门语言，更是艰难。好在我们有机会参加新生大学这样的社群。
+                        <br>对于新手来说，哪里都是学习区，每一天都是针对性练习。最有意思的是，调试代码即意味着即时反馈。成了就是 成了，错了就是错了。它和玩游戏一样，捡到宝箱立马打开，有惊喜有失望，但实时都有乐趣。
+                        <br>在这里，徐老师的用心大家有目共睹。在他的指引下去感受整个JS的脉络，能快速地对这门陌生语言形成感知，前行路上不再害怕。
+                        <br> 在这里，同学们热情洋溢，互相激励。学习虽然辛苦，但是在这样一个团体里，我们一点儿也不痛苦！
+
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="我们的心里话">
+                    <div id="abc">
+                        <div class="panel-body">
+                            <div class="words-pannel" v-for="item in JsonContent">
+                                <div class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img class="media-object avatar" v-bind:src="item.avatar" alt="..." style="width: 36px; height:36px">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            {{ item.name }}
+                                        </h4>
+                                        {{ item.words }}
+                                        <hr>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="学习笔记">
+                    <h3>未完待续</h3>
+                    <p>......</p>
                 </div>
             </div>
         </div>
